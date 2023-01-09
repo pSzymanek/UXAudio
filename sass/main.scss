@@ -1,0 +1,476 @@
+@import "colors";
+@import "animations";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	background-color: rgb(83, 83, 83);
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.navbar:hover {
+	background-color: #00060ec0;
+	backdrop-filter: blur(5px);
+}
+
+.underline {
+	width: 60px;
+	height: 3px;
+	background-color: $main-color;
+	margin: 0 auto 50px;
+}
+
+.shadow-bg {
+	background-color: #00060ec0;
+	backdrop-filter: blur(5px);
+}
+
+.colored-text {
+	color: $main-color;
+}
+
+nav {
+	z-index: 1;
+	transition: background-color 0.5s;
+
+	.navbar-nav .nav-link.active {
+		color: $main-color;
+	}
+
+	.navbar-toggler {
+		font-size: 30px;
+		border: none;
+		padding: 10px 15px;
+		color: $color-white;
+	}
+
+	.navbar-brand,
+	.nav-link {
+		text-transform: uppercase;
+		color: $color-white;
+	}
+
+	.nav-link:hover,
+	.navbar-brand:hover {
+		color: $main-color;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+	}
+}
+
+header {
+	color: $color-white;
+
+	h1 {
+		font-size: 38px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+	.btn-header {
+		background-color: $alter-color;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../img/microphone-640.jpg");
+		background-size: cover;
+		background-position: top;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.hero-img-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(22, 22, 22, 0.712);
+		z-index: -1;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding: 30px;
+		text-align: center;
+		z-index: 1;
+		letter-spacing: 3px;
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.wrap-arrow {
+		position: absolute;
+		transform: translateX(-50%);
+		display: block;
+		left: 50%;
+		bottom: 90px;
+		font-size: 30px;
+	}
+	.fa-chevron-down {
+		padding: 25px;
+		color: $color-white;
+	}
+}
+
+.aboutus {
+	background-color: $color-white;
+
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.about {
+		padding: 15px 50px;
+	}
+
+	.about:hover {
+		color: $alter-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url("../img/sound-640.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	color: $color-white;
+	z-index: 0;
+
+	.aboutus-hero-cover {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 13, 27, 0.658);
+		z-index: -1;
+	}
+
+	.aboutus-hero-item {
+		margin: 10px 0;
+		padding: 10px 30px;
+
+		i {
+			font-size: 36px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 18px;
+		}
+	}
+
+	.aboutus-hero-item:hover {
+		text-shadow: 0 0 40px $alter-color;
+	}
+}
+
+.portfolio {
+	background-color: $color-white;
+
+	.carousel-caption {
+		left: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.616);
+		padding: 40px 0;
+	}
+
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+
+	.carousel-container {
+		width: 75%;
+	}
+
+	.card-text {
+		height: auto;
+		padding-bottom: 20px;
+	}
+}
+
+.pricing {
+	background-color: $color-white;
+
+	.price-info {
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.price-box {
+		box-shadow: 3px 3px 6px rgba(0, 12, 39, 0.404);
+		background-color: #fff;
+		margin: 20px 10px;
+		padding: 30px;
+		transition: transform 0.2s;
+
+		h3 {
+			color: $main-color;
+		}
+
+		i {
+			padding: 3px;
+			color: $alter-color;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	.btn-main {
+		background-color: $main-color;
+	}
+
+	.price-tag {
+		font-weight: bold;
+		font-size: 24px;
+	}
+
+	.price-box:hover {
+		transform: scale(105%);
+	}
+}
+
+.team {
+	position: relative;
+	background-image: url("../img/table-1920.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $color-white;
+	}
+
+	.team-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(6, 0, 15, 0.678);
+		top: 0;
+		z-index: -1;
+	}
+}
+.card {
+	margin: 20px;
+	transition: transform 0.2s;
+	img {
+		height: 200px;
+		object-fit: cover;
+	}
+	.img-left {
+		object-position: left;
+	}
+	.img-right {
+		object-position: right;
+	}
+}
+
+.card-title {
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.card:hover {
+	transform: scale(1.05);
+}
+
+.card-text {
+	height: 85px;
+}
+
+.card-footer {
+	i {
+		padding: 10px;
+		color: $alter-color;
+	}
+
+	i:hover {
+		color: $main-color;
+	}
+}
+
+.achievements {
+	background-color: $color-white;
+
+	.achievement {
+		padding: 10px;
+	}
+
+	i {
+		color: white;
+		font-size: 48px;
+		text-shadow: 0 0 5px rgba(19, 19, 97, 0.637);
+		padding: 10px;
+	}
+
+	h3 {
+		color: $alter-color;
+	}
+
+	p {
+		font-size: 18px;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url("../img/city-640.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 0;
+
+	.contact-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-color: rgba(18, 6, 31, 0.767);
+		z-index: -1;
+	}
+	.underline {
+		background-color: $color-white;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: white;
+
+		.contact-item {
+			margin: 30px 0;
+
+			h3 {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				letter-spacing: 2px;
+			}
+		}
+	}
+	h2 {
+		color: $color-white;
+		font-weight: bold;
+	}
+
+	a {
+		color: white;
+		padding: 10px;
+		font-size: 26px;
+	}
+
+	a:hover {
+		color: $main-color;
+	}
+}
+// MEDIA QUERRIES
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 40px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 46px;
+		}
+
+		p {
+			font-size: 22px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+
+	.aboutus-hero {
+		background-image: url("../img/sound-1920.jpg");
+	}
+
+	.pricing {
+		.price-info {
+			font-size: 20px;
+		}
+	}
+	.team {
+		.card {
+			img {
+				height: 300px;
+			}
+		}
+	}
+	.contact {
+		background-image: url("../img/city-1920.jpg");
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url("../img/microphone-1920.jpg");
+		}
+		.wrap-arrow {
+			bottom: 20px;
+		}
+	}
+
+	.team {
+		.card {
+			img {
+				height: 400px;
+			}
+		}
+	}
+}
